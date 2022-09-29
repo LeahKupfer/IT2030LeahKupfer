@@ -1,0 +1,36 @@
+﻿@model Sale
+@{
+    ViewData["Title"] = "Leah's Sporting Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Leah's Sporting</h1>
+@*    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+*@
+</div>
+<form asp-action="Index" method="post">
+<div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="SaleAmount"></label>
+        <input asp-for="SaleAmount"/>
+    </div>
+    
+    <div>
+        <label asp-for="TaxRate"></label>
+        <input asp-for="TaxRate"/>
+    </div>
+
+    <div>
+        <label>Tax Amount</label>
+        <input value=@ViewBag.TaxAmount.ToString("C2") readonly/>
+    </div>
+
+    <div>
+        <label>Total Sale Price</label>
+        <input value=@ViewBag.TotalSalePrice.ToString("C2") readonly/>
+        </div>
+
+        <button type="submit">Calculate</button>
+        <a asp-action="Index">Clear</a>
+        </form>
+
