@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using LeahSporting.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<LeahSportingContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LeahSportingContext") ?? throw new InvalidOperationException("Connection string 'LeahSportingContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
