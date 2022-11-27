@@ -1,0 +1,23 @@
+AtteWhen I ran the app, it gives you build errors pop up. In the Errors list I get these errors:
+
+CS1002 ;expected , File TipCalculator.cs
+To fix the TipCalculator.cs, I add a semicolon here. return tip;
+CS0161 'HomeController.Index()':not all code paths return a value, File HomeController.cs
+To fix this line we need to add a return value. I added return View(); and was finally able to get the solution to run.
+CS0103 The name 'Viewbag' does not exist in the current context, File HomeController.cs
+To fix this you needed to change Viewbag to ViewBag. Names are case sensitive. ViewBag.TwentyFive = 0;
+"widht" is not a known CSS property name. File site.css
+
+After getting the app to run, I get these errors on the internal server error page.
+
+line 15 @ViewBag.Fifteem.ToString("c2")
+line 6
+
+Both of these errors refer to the Index.cshtml file
+
+The Index.cshtml file has a couple other spelling errors:
+  <label>@ViewBag.**Twety**.ToString("c2")</label>  
+   <label>@ViewBag.**TwentyFeve**.ToString("c2")</label> 
+
+I set a breakpoint at the var tip = MealCost.Value * percent; and saw that the calculation was dividing the percent instead of multiplying. I changed the line var tip = MealCost.Value / percent; to var tip = MealCost.Value * percent;
+The css error was easy enough to fix using Developer Tools on chrome. We just needed to correct widht to width
