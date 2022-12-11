@@ -1,0 +1,22 @@
+Week 14 Lab Directions:
+Applied Knowledge: In this lab, you will add a page to your application and validate data for the newly added page using the validation techniques and data attributes to validate the data.
+Objectives:
+Add a page to application
+Validate data for the page added
+Instructions:
+ Make a copy of your completed Week 11 Lab files and use this copy to start your Week 14 lab. You will add another link to your Navbar.
+ Add a Customer class to your Models folder with the following fields:
+First Name – string, 10 characters and no special characters
+Last Name– string, 10 characters and no special characters
+Street Address - string
+City - string
+State – 2 characters and no special characters
+Zip Code – 5 digits
+Phone – 10 digits
+Email - string
+ Each of these fields will be displayed in a Razor view file named Support.cshtml. In your Customer.cs class, you are to validate all 8 fields to ensure that only valid data is entered in the fields. Additionally, the First Name, Last Name, State, Zip Code, and phone should be validated as specified above. All fields are required.
+ Create a Views/Support folder, add your Support.cshtml file to this folder and include labels and input to display the 8 fields from the customer class. It should be a strongly typed view and  include a heading. The form should be styled like the styling for the Tools page. It will be part of your Navbar. The name of this new page is Support. The Support page will be a web form that will store the information in step 2 from customers visiting your retail store.
+ Add a Support Controller to display the Support View. Be sure to include code for your [HttpGet] and [HttpPost] methods.
+ Add code in your Views/Shared/_Layout.cshtml to include a link in your navbar for your Support page. Make sure that your ASP.NET tag helpers are using the correct controllers and action methods.
+ Upload your completed files to your Week 14 lab folder in GitHub and submit your link in Blackboard. The images below are screenshots of the Support page.
+ 
